@@ -1,0 +1,25 @@
+{{> header}}
+
+<table class="table table-bordered">
+<tr>
+	<th>#</th>
+	<th>Nome</th>
+	<th><a class="btn btn-default" href="/tipo/new">novo</a></th>
+</tr>
+{{#tipos}}
+    <tr>
+    	<td>{{id}}</td>
+    	<td>{{nome}}</td>
+		<td>
+			<a class="btn btn-default" href="/tipo/edit/{{id}}">editar</a>&nbsp; 
+			<a class="btn btn-default" href="/tipo/delete/{{id}}">deletar</a>
+		</td>
+    </tr>
+{{/tipos}}
+</table>
+
+{{#empty}}
+  <p>The list is empty.</p>
+{{/empty}}
+
+{{> footer}}

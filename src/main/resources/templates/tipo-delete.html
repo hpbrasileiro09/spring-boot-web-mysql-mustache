@@ -1,0 +1,14 @@
+{{> header}}
+
+<form action="/tipo/remove" method="POST">
+  <div class="form-group">
+    <label for="name">Deletar Nome</label>
+	<input type="text" class="form-control" name="nome" id="nome" value="{{tipo.nome}}" readonly="readonly">
+  </div>
+  <br />
+  <input type="hidden" name="id" value="{{tipo.id}}">
+  <button type="submit" class="btn btn-default">Sim</button>
+  <a class="btn btn-default" href="/tipo">Não</a>
+</form>
+
+{{> footer}}
